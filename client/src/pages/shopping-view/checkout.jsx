@@ -108,13 +108,13 @@ function ShoppingCheckout() {
         <div className="flex flex-col gap-4">
           {cartItems && cartItems.items && cartItems.items.length > 0
             ? cartItems.items.map((item) => (
-                <UserCartItemsContent cartItem={item} />
+                <UserCartItemsContent key={item.productId} cartItem={item} />
               ))
             : null}
           <div className="mt-8 space-y-4">
             <div className="flex justify-between">
               <span className="font-bold">Total</span>
-              <span className="font-bold">${totalCartAmount}</span>
+              <span className="font-bold">₹{totalCartAmount}</span> {/* Changed to ₹ */}
             </div>
           </div>
           <div className="mt-4 w-full">

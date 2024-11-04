@@ -70,13 +70,15 @@ function ShoppingOrders() {
                             ? "bg-green-500"
                             : orderItem?.orderStatus === "rejected"
                             ? "bg-red-600"
-                            : "bg-black"
+                            : orderItem?.orderStatus=== "delivered"
+                            ?"bg-green-600"
+                            :"bg-yellow-600"
                         }`}
                       >
                         {orderItem?.orderStatus}
                       </Badge>
                     </TableCell>
-                    <TableCell>${orderItem?.totalAmount}</TableCell>
+                    <TableCell>₹{orderItem?.totalAmount}</TableCell>
                     <TableCell>
                       <Dialog
                         open={openDetailsDialog}
