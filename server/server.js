@@ -15,7 +15,6 @@ const shopReviewRouter = require("./routes/shop/review-routes");
 
 const commonFeatureRouter = require("./routes/common/feature-routes");
 
-const cors = require('cors');
 app.use(cors({ origin: 'https://mernecom-ay2p.vercel.app/' })); // Replace with your actual frontend URL
 
 //create a database connection -> u can also
